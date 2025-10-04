@@ -130,8 +130,8 @@ gltfLoader.load(
     video.playsInline = true;
     video.autoplay = true;
     video.loop = true;
-    video.setAttribute('crossorigin', 'anonymous'); // ✅ Needed for GitHub Pages
-    video.play(); // ✅ Helps trigger playback
+    video.setAttribute('crossorigin', 'anonymous'); 
+    video.play();
 
     // create video texture
     const videoTexture = new THREE.VideoTexture(video);
