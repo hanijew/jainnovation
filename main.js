@@ -125,11 +125,13 @@ gltfLoader.load(
 
     // load video
     const video = document.createElement('video');
-    video.src = 'textures/arcane.mp4';
+    video.src = './textures/arcane.mp4';
     video.muted = true;
     video.playsInline = true;
     video.autoplay = true;
     video.loop = true;
+    video.setAttribute('crossorigin', 'anonymous'); // ✅ Needed for GitHub Pages
+    video.play(); // ✅ Helps trigger playback
 
     // create video texture
     const videoTexture = new THREE.VideoTexture(video);
